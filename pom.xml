@@ -18,6 +18,13 @@
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.language>java</sonar.language>
 
+<!--        <properties>-->
+            <!-- SonarQube server URL -->
+            <sonar.host.url>http://localhost:9000</sonar.host.url>
+            <!-- SonarQube authentication token -->
+            <sonar.login>sqp_b4f03d3050ab1c351ce48a63d37c21009284e0ba</sonar.login>
+<!--        </properties>-->
+
     </properties>
 
   <dependencies>
@@ -96,6 +103,12 @@
                     </goals>
                 </execution>
             </executions>
+        </plugin>
+
+        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+<!--            <version>[version]</version> &lt;!&ndash; Use the latest version &ndash;&gt;-->
         </plugin>
 
 
